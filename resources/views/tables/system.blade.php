@@ -7,12 +7,12 @@
     <div class="row justify-content-center mt-4">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Tavles</div>
+                <div class="card-header">System Table</div>
 
                 <div class="card-body">
-                    <div class="form-group text-center">
-                        <label for="table">Choose table</label>
-                        <select class="form-control" id="table" name="table">
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select class="form-control" id="type" name="type">
                             <option value="#">Choose Table</option>
                             <option value="{{ route('tables/system') }}">System group</option>
                             <option value="{{ route('tables/ipNetToMediaIfIndex') }}">ipNetToMediaIfIndex</option>
@@ -21,20 +21,33 @@
                             <option value="{{ route('tables/ipNetToMediaType') }}">ipNetToMediaPhysAddress</option>
                         </select>
                     </div>
-                    <span style="display: flex;
-                    justify-content: space-evenly;">
-                        <a class="btn btn-primary btn-lg" href="{{ route('snmp/get') }}" role="button">Get Object</a>
-                        <a class="btn btn-primary btn-lg" href="{{ route('snmp/set') }}" role="button">Set Object</a>
-                    </span>
-
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($systemData as $row)
+                            <tr>
+                                <th scope="row"> {{$row['id']}} </th>
+                                <td> {{$row['type']}} </td>
+                                <td> {{$row['data']}} </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
+
     <script>
         $(function(){
           // bind change event to select
-          $('#table').on('change', function () {
+          $('#type').on('change', function () {
               var url = $(this).val(); // get selected value
               if (url) { // require a URL
                   window.location = url; // redirect
@@ -42,6 +55,6 @@
               return false;
           });
         });
-    </script
+    </script>
 </div>
 @endsection
