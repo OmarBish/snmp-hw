@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3bc3a1401b6d9a45a9adba0eca8d521",
+    "content-hash": "919ba06a86d1e662ff2629a59e02365d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -430,6 +430,158 @@
                 "trusted proxy"
             ],
             "time": "2020-02-22T01:51:47+00:00"
+        },
+        {
+            "name": "freedsx/asn1",
+            "version": "0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FreeDSx/ASN1.git",
+                "reference": "d1f7c9dc0bbe047a95a527cd134e3d7dece97ac3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FreeDSx/ASN1/zipball/d1f7c9dc0bbe047a95a527cd134e3d7dece97ac3",
+                "reference": "d1f7c9dc0bbe047a95a527cd134e3d7dece97ac3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "^5.0"
+            },
+            "suggest": {
+                "ext-gmp": "For big integer support in Integer/Enumerated/OID types and tag numbers."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FreeDSx\\Asn1\\": "src/FreeDSx/Asn1"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chad Sikorra",
+                    "email": "Chad.Sikorra@gmail.com"
+                }
+            ],
+            "description": "An ASN.1 library for PHP.",
+            "homepage": "https://github.com/FreeDSx/ASN1",
+            "keywords": [
+                "DER",
+                "asn.1",
+                "asn1",
+                "ber",
+                "x.690"
+            ],
+            "time": "2019-03-10T22:33:37+00:00"
+        },
+        {
+            "name": "freedsx/snmp",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FreeDSx/SNMP.git",
+                "reference": "0562d11e794e58ab3334b70bd6bfa3a5552abc5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FreeDSx/SNMP/zipball/0562d11e794e58ab3334b70bd6bfa3a5552abc5b",
+                "reference": "0562d11e794e58ab3334b70bd6bfa3a5552abc5b",
+                "shasum": ""
+            },
+            "require": {
+                "freedsx/asn1": "^0.4.0",
+                "freedsx/socket": "^0.3.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0.0",
+                "phpspec/phpspec": "^5.0"
+            },
+            "suggest": {
+                "ext-gmp": "Needed for counter64 bigint SNMP values.",
+                "ext-openssl": "For SNMP privacy encryption support."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FreeDSx\\Snmp\\": "src/FreeDSx/Snmp"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chad Sikorra",
+                    "email": "Chad.Sikorra@gmail.com"
+                }
+            ],
+            "description": "A Pure PHP SNMP Library",
+            "homepage": "https://github.com/FreeDSx/SNMP",
+            "keywords": [
+                "snmp"
+            ],
+            "time": "2019-03-11T19:58:44+00:00"
+        },
+        {
+            "name": "freedsx/socket",
+            "version": "0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FreeDSx/Socket.git",
+                "reference": "51441af8bff810b3a46af3cf65e1e4edbd83e939"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FreeDSx/Socket/zipball/51441af8bff810b3a46af3cf65e1e4edbd83e939",
+                "reference": "51441af8bff810b3a46af3cf65e1e4edbd83e939",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "freedsx/asn1": "^0.4.0",
+                "phpspec/phpspec": "^5.0",
+                "phpstan/phpstan": "^0.11.15",
+                "phpstan/phpstan-strict-rules": "^0.11.1"
+            },
+            "suggest": {
+                "ext-openssl": "For SSL/TLS support.",
+                "freedsx/asn1": "For ASN.1 based message queues."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FreeDSx\\Socket\\": "src/FreeDSx/Socket"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chad Sikorra",
+                    "email": "Chad.Sikorra@gmail.com"
+                }
+            ],
+            "description": "A simple socket library for FreeDSx",
+            "homepage": "https://github.com/FreeDSx/Socket",
+            "keywords": [
+                "Socket",
+                "tcp",
+                "udp"
+            ],
+            "time": "2019-09-01T23:07:27+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",
