@@ -64,7 +64,7 @@
             "chmod -R 777 public/"
         ],
         "compile": [
-            "sudo chmod -R 755 ./",
+            "chmod -R 755 ./",
             "chmod -R o+w ./storage"
         ]
     }
