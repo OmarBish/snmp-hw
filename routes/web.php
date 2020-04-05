@@ -18,5 +18,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('snmp/get','SnmpController@get');
+Route::get('snmp/walk','SnmpController@walk');
+Route::post('snmp/set','SnmpController@set');
 
 Route::get('/home', 'HomeController@index')->name('home');
