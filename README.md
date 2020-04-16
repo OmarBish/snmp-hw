@@ -3,7 +3,7 @@ main files can be found in
 - App/HTTP/Controllers/SnmpController
 - resources/views/
 
-for demo please visit [snmp2.bishtawi.me](snmp2.bishtawi.me)
+for demo please visit [https://snmp2.bishtawi.me](snmp2.bishtawi.me)
 
 ## notes
 - not all tables work on the remote server since it's an ubunto server (it seem it has diffrent OID ) but if you pull the repo and run it localy it will work fine 
