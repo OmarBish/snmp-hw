@@ -19,3 +19,4 @@ php artisan migrate
 php artisan serv
 ```
 then you can access the server at the url shown to you in the command 
+
